@@ -4,6 +4,7 @@ import {mapState, mapGetters, mapMutations, mapActions} from 'vuex'
 Vue.use(Vuex)
 
 const CartStore = {
+  namespaced: true,
   state: {
     items: [
       {
@@ -120,10 +121,12 @@ new Vue({
   store,
   computed: {
     ...mapState(['todos', 'cart', 'markedItems']),
-    ...mapGetters(['doneTodos', 'markedItems'])
+    ...mapGetters(['doneTodos', 'markedItems']),
   },
   methods: {
-
+    add () {
+      return this.$store.commit('cart/add')
+    }
   },
   components: {
     counter: Counter

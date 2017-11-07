@@ -14,14 +14,14 @@
       <ul>
         <li v-for="todo in doneTodos">{{ todo.task }}</li>
       </ul>
-      <h2>Cart items</h2>
+      <h2 @click="cart.add">Cart items</h2>
       <ul>
         <li v-for="item in cart.items">{{ item.name }}</li>
       </ul>
-      <h2>Marked items</h2>
+      <!-- <h2>Marked items</h2>
       <ul>
         <li v-for="item in markedItems">{{ item.name }}</li>
-      </ul>
+      </ul> -->
     </div>
     <script src="/dist/build.js"></script>
   </body>
