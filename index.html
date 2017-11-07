@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>vuex-tut</title>
+  </head>
+  <body>
+    <div id="app">
+      <counter></counter>
+      <ul>
+        <li v-for="todo in todos">{{ todo.task }}</li>
+      </ul>
+      <h2>Complete</h2>
+      <ul>
+        <li v-for="todo in doneTodos">{{ todo.task }}</li>
+      </ul>
+      <h2>Cart items</h2>
+      <ul>
+        <li v-for="item in cart.items">{{ item.name }}</li>
+      </ul>
+      <h2>Marked items</h2>
+      <ul>
+        <li v-for="item in markedItems">{{ item.name }}</li>
+      </ul>
+    </div>
+    <script src="/dist/build.js"></script>
+  </body>
+</html>
